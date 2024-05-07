@@ -50,8 +50,8 @@ jobs:
           context: src/ffwebapp
           file: src/ffwebapp/Dockerfile
           tags: |
-            ${{ vars.ACR_URL }}/myfirstproject.webapi:${{ github.sha }}
-            ${{ vars.ACR_URL }}/myfirstproject.webapi:latest
+            ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
+             ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:latest
           push: true
     
       - name: View images
