@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ffwebapp
-        image: crffwebappdev.azurecr.io/ffwebapp:6b3ade6d396be05946ee58a6033579e2e4204b36
+        image: crffwebappdev.azurecr.io/ffwebapp:b5f2bacb376722dbcca56bfa55bfe18a8821927a
         ports:
         - containerPort: 8080
         resources:
