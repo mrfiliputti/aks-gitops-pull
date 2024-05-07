@@ -64,7 +64,7 @@ jobs:
       - uses: actions/checkout@v4
         name: Checkout config repository
         with:
-          repository: 'mrfiliputti/aks-gitops-push'
+          repository: 'mrfiliputti/aks-gitops-pull'
           token: ${{ secrets.GH_PAT }}
           
       - name: Dump GitHub context
