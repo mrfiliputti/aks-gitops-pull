@@ -91,13 +91,13 @@ jobs:
           
           echo "::group::file"
           echo "--- View webapi image ---"
-          cat src/ffwebapp/ffwebapp.yaml | grep "image:" | awk -F'"' '{print $2}'
+          cat k8s/ffwebapp.yaml | grep "image:" | awk -F'"' '{print $2}'
           
           echo "--- Replace image tag ---"
-          sed -i "s|crffwebappdev.azurecr.io/ffwebapp:[^\"]*|crffwebappdev.azurecr.io/ffwebapp:$IMAGE_LABEL|" src/ffwebapp/ffwebapp.yaml
+          sed -i "s|crffwebappdev.azurecr.io/ffwebapp:[^\"]*|crffwebappdev.azurecr.io/ffwebapp:$IMAGE_LABEL|" k8s/ffwebapp.yaml
           
           echo "--- View modified image ---"
-          cat src/ffwebapp/ffwebapp.yaml | grep "image:" | awk -F'"' '{print $2}'
+          cat k8s/ffwebapp.yaml | grep "image:" | awk -F'"' '{print $2}'
           echo "::endgroup::"
 
           echo "::group::Git commands"
